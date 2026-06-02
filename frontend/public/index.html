@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID19 OData Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <h1>COVID19 data flow</h1>
+      <p class="subtitle">confirmed | deaths | recovered | daily_reports</p>
+
+      <div class="controls">
+        <label for="metricSelect">Metric</label>
+        <select id="metricSelect">
+          <option value="confirmed">Confirmed</option>
+          <option value="deaths">Deaths</option>
+          <option value="recovered">Recovered</option>
+          <option value="dailyIncrease">Daily Increase</option>
+        </select>
+      </div>
+
+      <div class="chart-card">
+        <h2># of Cases Worldwide</h2>
+        <div id="mapChart" class="chart"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>Treemap of Countries</h2>
+        <div id="treeMapChart" class="chart"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>Top 20 Table</h2>
+        <table id="topTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
